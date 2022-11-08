@@ -1,118 +1,99 @@
 # Patterns
 
-<!--! {1} -->
-<!--
- # # # # #
- # # # # #
- # # # # #
- # # # # #
--->
+ 
+1.  # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
 
-<!--? code   -->
+    let n = 5;
 
-let n = 5;
+    for (let j = 0; j < n; j++) {   <---outer loop
+        let s = "";
+            for (let i = 0; i < n; i++) {   <---inner loop
+             s += "#" + " ";
+            }
+        console.log(s);
+    }
 
-for (let j = 0; j < n; j++) {
-let s = "";
-for (let i = 0; i < n; i++) {
-s += "#" + " ";
-}
-console.log(s);
-}
+ 
+2.  #
+    # #
+    # # #
+    # # # #
+    # # # # #
 
-<!--! {2} -->
-<!--
- #
- # #
- # # #
- # # # #
- # # # # #
--->
+    let n = 5;
 
-<!--? code   -->
+    for (let j = 0; j < n; j++) {   <---outer loop
+    let s = "";
+    for (let i = 0; i <= j; i++) {  <---inner loop
+    s += "#" + " ";
+    }
+    console.log(s);
+    }
 
-let n = 5;
+ 
+3.  # # # # #
+    # # # #
+    # # #
+    # #
+    #
 
-for (let j = 0; j < n; j++) {
-let s = "";
-for (let i = 0; i <= j; i++) {
-s += "#" + " ";
-}
-console.log(s);
-}
+    let n = 5;
 
-<!--! {3} -->
-<!--
- # # # # #
- # # # #
- # # #
- # #
- #
--->
+    for (let j = 0; j < n; j++) {   <---outer loop
+    let s = "";
+    for (let i = 0; i < n; i++) {   <---inner loop
+    s += "#" + " ";
+    }
+    console.log(s);
+    }
 
-<!--? code   -->
+ 
+4.      *
+       **
+      ***
+     ****
+    *****
 
-let n = 5;
+    let n=5;
 
-for (let j = 0; j < n; j++) {
-let s = "";
-for (let i = 0; i < n; i++) {
-s += "#" + " ";
-}
-console.log(s);
-}
+    let string="";
+    for(let i=0;i<n;i++){   <---outer loop
 
-<!--! {4} -->
-<!--
-    *
-   **
-  ***
- ****
-*****
--->
+    for(let j=i;j<n-1;j++){ <---space adding
+    string+=" ";
+    }
 
-<!--? code   -->
+    for(let k=0;k<=i;k++){  <---inner loop star adding
+    string+="*"
+    }
+    string+="\n"    <---next line adding                
+    }
+    console.log(string);
 
-let n=5;
+ 
+5.      *
+       ***
+      *****
+     *******
+    *********
 
-let string="";
-for(let i=0;i<n;i++){
 
-for(let j=i;j<n-1;j++){
-string+=" ";
-}
+    let n=5;
 
-for(let k=0;k<=i;k++){
-string+="*"
-}
-string+="\n"
-}
-console.log(string);
+    let string="";
+    for(let i=0;i<n;i++){   <---outer loop
 
- <!--! {5} -->
-<!--
-    *
-   ***
-  *****
- *******
-*********
--->
+    for(let j=i;j<n-1;j++){     <---space adding
+    string+=" ";
+    }
 
-<!--? code   -->
-
-let n=5;
-
-let string="";
-for(let i=0;i<n;i++){
-
-for(let j=i;j<n-1;j++){
-string+=" ";
-}
-
-for(let k=0;k<=i;k++){
-string+="*" + " "
-}
-string+="\n"
-}
-console.log(string);
+    for(let k=0;k<=i;k++){  <---inner loop star adding + space adding after star
+    string+="*" + " "
+    }
+    string+="\n"    <---next line adding
+    }
+    console.log(string);
 
