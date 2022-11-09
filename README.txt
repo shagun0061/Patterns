@@ -58,20 +58,21 @@
     *****
 
     let n=5;
-
     let string="";
-    for(let i=0;i<n;i++){   <---outer loop
 
-    for(let j=i;j<n-1;j++){ <---space adding
-    string+=" ";
+    for(let i=0;i<n;i++){
+
+    for(let j=i;j<n-1;j++){
+        string+=" ";            ----> space adding making left decreasing triangle
     }
 
-    for(let k=0;k<=i;k++){  <---inner loop star adding
-    string+="*"
+    for(let k=0;k<=i;k++){      ----> making right increasing triangle
+        string+="*";
+        
     }
-    string+="\n"    <---next line adding                
+    string+="\n"
     }
-    console.log(string);
+    console.log(string)
 
  
 5.      *
@@ -80,8 +81,8 @@
      *******
     *********
 
-
-    let n=5;
+ 
+5.1 let n=5;   
 
     let string="";
     for(let i=0;i<n;i++){   <---outer loop
@@ -97,3 +98,103 @@
     }
     console.log(string);
 
+                                2nd way 
+
+    let n=5;
+    let string="";
+
+    for(let i=0;i<n;i++){
+    for(let j=i;j<=n;j++){
+        string+=" ";
+    }
+
+    for(let k=0;k<=i;k++){
+        string+="*";
+        
+    }
+
+    for(let l=0;l<i;l++){
+        string+="*"
+    }
+    string+="\n"
+    }
+    console.log(string) 
+
+6   *********
+     *******
+      *****
+       ***
+        *
+
+   let n=5;
+    let string="";
+
+    for(let i=0;i<n;i++){
+    for(let j=0;j<i;j++){
+        string+=" ";
+    }
+
+    for(let k=i;k<n;k++){
+        string+="*";
+        
+    }
+
+    for(let l=i;l<n-1;l++){
+        string+="*"
+    }
+    string+="\n"
+    }
+    console.log(string)
+    
+7       *
+       ***
+      *****
+     *******
+    *********
+     *******
+      *****
+       ***
+        *    
+
+    let n=5;
+    let string="";
+     
+      ---------increasing mountain Pattern-----------
+
+        for(let i=0;i<n-1;i++){
+
+        for(let j=i;j<n-1;j++){
+            string+=" ";
+        }
+
+        for(let k=0;k<=i;k++){
+            string+="*";
+            
+        }
+
+        for(let l=0;l<i;l++){
+            string+="*"
+        }
+        string+="\n"
+        }
+        
+
+      ---------decreasing mountain Pattern-----------
+    
+    for(let i=0;i<n;i++){
+    for(let j=0;j<i;j++){
+        string+=" ";
+    }
+
+    for(let k=i;k<n;k++){
+        string+="*";
+        
+    }
+
+    for(let l=i;l<n-1;l++){
+        string+="*"
+    }
+    string+="\n"
+    }
+    
+    console.log(string)      
